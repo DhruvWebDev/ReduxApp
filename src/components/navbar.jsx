@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 
 export default function Navbar() {
-    const state = useSelector(state => state.amount)
+    const amount = useSelector(state => state.amount)
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light mg-0 fixed-top mt-100 navbar-dark bg-dark">
             <div className="container-fluid">
@@ -29,7 +29,7 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <button className="btn btn-outline-danger" type="submit" disabled = {true}>BanK Balance:0</button>
+                        <button className="btn btn-outline-danger" type="submit" disabled = {true}>BanK Balance:{amount}</button>
                     </form>
                 </div>
             </div>

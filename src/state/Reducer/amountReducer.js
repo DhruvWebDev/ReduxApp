@@ -1,14 +1,15 @@
 const amountReducer = (state = 0, action) => {
     switch (action.type) {
-        case  "withdrawMoney":
-            return state + action.payload;
+        case "withdrawMoney":
+            return state - action.payload;  // Withdraw amount
 
-            case "depositMoney":
-            return state - action.payload;
-    
+        case "depositMoney":
+            return state + action.payload;  // Deposit amount
+
         default:
-            state;
+            return state;  // Return unchanged state if no matching action
+ 
     }
 }
 
-export default amountReducer;
+export default amountReducer;  // Default export
