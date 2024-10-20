@@ -1,5 +1,7 @@
+import { useSelector } from "react-redux"
 
 export default function Navbar() {
+    const state = useSelector(state => state.amount)
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light mg-0 fixed-top mt-100 navbar-dark bg-dark">
             <div className="container-fluid">
